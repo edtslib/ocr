@@ -14,7 +14,7 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'id.co.edtslib'
-                artifactId = 'Ocr'
+                artifactId = 'ocr'
                 version = '1.0.0'
             }
         }

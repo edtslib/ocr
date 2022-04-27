@@ -9,10 +9,10 @@ import androidx.appcompat.app.AppCompatActivity
 import com.otaliastudios.cameraview.CameraListener
 import com.otaliastudios.cameraview.CameraView
 import com.otaliastudios.cameraview.PictureResult
-import id.co.edtslib.EdtsOcr
-import id.co.edtslib.EdtsOcrDelegate
-import id.co.edtslib.EdtsOcrType
-import id.co.edtslib.Ktp
+import id.co.edtslib.ocr.EdtsOcr
+import id.co.edtslib.ocr.EdtsOcrDelegate
+import id.co.edtslib.ocr.EdtsOcrType
+import id.co.edtslib.ocr.Ktp
 import id.co.edtslib.util.PermissionUtil
 
 

@@ -1,4 +1,4 @@
-package id.co.edtslib
+package id.co.edtslib.ocr
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -8,7 +8,8 @@ import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
 
 class EdtsOcr(private val type: EdtsOcrType,
-              private val delegate: EdtsOcrDelegate) {
+              private val delegate: EdtsOcrDelegate
+) {
     fun process(bitmap: Bitmap?) {
         if (bitmap == null) {
             delegate.onCaptured(null, null)

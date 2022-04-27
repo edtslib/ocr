@@ -1,4 +1,4 @@
-package id.co.edtslib
+package id.co.edtslib.ocr
 
 import org.junit.Test
 

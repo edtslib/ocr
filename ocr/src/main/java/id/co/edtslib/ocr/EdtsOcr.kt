@@ -2,7 +2,6 @@ package id.co.edtslib.ocr
 
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
-import android.util.Log
 import com.google.mlkit.vision.common.InputImage
 import com.google.mlkit.vision.text.TextRecognition
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions
@@ -22,12 +21,9 @@ class EdtsOcr(private val type: EdtsOcrType,
     fun process(file: String?) {
         if (file == null) {
             delegate.onCaptured(null, null)
-            Log.d("abah", "abah null $file")
 
         }
         else {
-            Log.d("abah", "abah $file")
-
             val bitmap = BitmapFactory.decodeFile(file)
             process(bitmap)
         }
@@ -40,15 +36,12 @@ class EdtsOcr(private val type: EdtsOcrType,
     }
 
     private fun processKTP(bitmap: Bitmap) {
-        Log.d("abah", "abah processKTP")
         val image = InputImage.fromBitmap(bitmap, 0)
         val recognizer =
             TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
         recognizer.process(image)
             .addOnSuccessListener { visionText ->
                 val s = visionText.text
-                Log.d("abah", "abah texrt ${visionText.text}")
-
                 val nik = getNik(s)
                 if (nik?.isNotEmpty() == true) {
                     delegate.onCaptured(Ktp(nik), s)

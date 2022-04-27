@@ -1,5 +1,5 @@
 package id.co.edtslib
 
 interface EdtsOcrDelegate {
-    fun onCaptured(ktp: Any?, text: String?)
+    fun onCaptured(captured: Any?, text: String?)
 }

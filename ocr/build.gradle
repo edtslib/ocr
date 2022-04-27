@@ -1,6 +1,24 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'maven-publish'
+}
+
+group = 'id.co.edtslib'
+version = '1.0.0'
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'id.co.edtslib'
+                artifactId = 'Ocr'
+                version = '1.0.0'
+            }
+        }
+    }
 }
 
 android {

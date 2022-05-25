@@ -107,6 +107,7 @@ class EdtsOcr(private val type: EdtsOcrType,
         p = p.replace("o", "0", ignoreCase = true)
         p = p.replace("D", "0")
         p = p.replace("s", "5", ignoreCase = true)
+        p = p.replace("A", "8")
 
         return p
     }
